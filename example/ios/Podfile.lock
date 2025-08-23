@@ -1,6 +1,6 @@
 PODS:
   - boost (1.84.0)
-  - DateI18n (0.1.0):
+  - DateI18n (1.0.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1907,7 +1907,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost: 7e761d76ca2ce687f7cc98e698152abd03a18f90
-  DateI18n: ec5490fd58e8e7850ebf875cc3c0459ed9e3cd00
+  DateI18n: 6a5d74177a4359284ea4b813ebb719f6db5c53cd
   DoubleConversion: cb417026b2400c8f53ae97020b2be961b59470cb
   fast_float: 06eeec4fe712a76acc9376682e4808b05ce978b6
   FBLazyVector: 84b955f7b4da8b895faf5946f73748267347c975
@@ -1974,7 +1974,7 @@ SPEC CHECKSUMS:
   React-timing: a90f4654cbda9c628614f9bee68967f1768bd6a5
   React-utils: a612d50555b6f0f90c74b7d79954019ad47f5de6
   ReactAppDependencyProvider: 04d5eb15eb46be6720e17a4a7fa92940a776e584
-  ReactCodegen: c63eda03ba1d94353fb97b031fc84f75a0d125ba
+  ReactCodegen: efbfc8c26762f4e3f54bdc03262182a14bf43ed6
   ReactCommon: 76d2dc87136d0a667678668b86f0fca0c16fdeb0
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: c758bfb934100bb4bf9cbaccb52557cee35e8bdf

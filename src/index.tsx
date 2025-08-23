@@ -1,5 +1,7 @@
 import DateI18n, { DateType } from './NativeDateI18n';
 
+export { DateType };
+
 export function formatDate(
   date: Date,
   formatStyle: DateType = DateType.long

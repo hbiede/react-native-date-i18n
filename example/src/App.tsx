@@ -1,6 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { formatDate, formatTime, formatDateTime } from 'react-native-date-i18n';
-import { DateType } from '../../src/NativeDateI18n';
+import {
+  DateType,
+  formatDate,
+  formatTime,
+  formatDateTime,
+} from 'react-native-date-i18n';
 
 export default function App() {
   let testDate = new Date(953276400000);

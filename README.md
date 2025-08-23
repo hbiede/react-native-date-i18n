@@ -18,11 +18,11 @@ npm install react-native-date-i18n
 
 
 ```js
-import { multiply } from 'react-native-date-i18n';
+import { DateType, formatDate, formatTime, formatDateTime } from 'react-native-date-i18n';
 
-// ...
-
-const result = multiply(3, 7);
+formatDate(testDate, DateType.long);
+formatTime(testDate, DateType.medium);
+formatDateTime(testDate, DateType.full, DateType.short);
 ```
 
 
