@@ -6,10 +6,10 @@ A React Native library to handle localizing date objects to the user's device se
 
 
 ```sh
-# Using node
+# Using yarn
 yarn add react-native-date-i18n
 
-# Using node
+# Using npm
 npm install react-native-date-i18n
 ```
 
@@ -24,6 +24,11 @@ formatDate(testDate, DateType.long);
 formatTime(testDate, DateType.medium);
 formatDateTime(testDate, DateType.full, DateType.short);
 ```
+
+The `DateType` options map onto values of the same names across both operating systems:
+
+ * [iOS Formats](https://developer.apple.com/documentation/foundation/dateformatter/style)
+ * [Android Formats](https://developer.android.com/reference/java/time/format/FormatStyle)
 
 
 ## Contributing
