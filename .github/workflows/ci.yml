@@ -84,6 +84,10 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@017a9effdb900e5b5b2fddfb590a105619dca3c3 # v4.4.2
+        if: env.turbo_cache_hit != 1
+
       - name: Finalize Android SDK
         if: env.turbo_cache_hit != 1
         run: |
@@ -100,7 +104,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Build example for Android
+      - name: Build for Android
         env:
           JAVA_OPTS: "-XX:MaxHeapSize=6g"
         run: |
@@ -148,6 +152,6 @@ jobs:
           bundle exec pod repo update --verbose
           bundle exec pod install --project-directory=ios
 
-      - name: Build example for iOS
+      - name: Build for iOS
         run: |
           yarn turbo run build:ios --cache-dir="${{ env.TURBO_CACHE_DIR }}"
