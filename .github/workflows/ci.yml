@@ -110,7 +110,6 @@ jobs:
 
       - name: Build for Android
         env:
-          ADNROID_HOME: env.ANDROID_HOME
           JAVA_OPTS: "-XX:MaxHeapSize=6g"
         run: |
           yarn turbo run build:android --cache-dir="${{ env.TURBO_CACHE_DIR }}"
