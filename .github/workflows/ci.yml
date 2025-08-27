@@ -88,6 +88,10 @@ jobs:
         uses: gradle/actions/setup-gradle@017a9effdb900e5b5b2fddfb590a105619dca3c3 # v4.4.2
         if: env.turbo_cache_hit != 1
 
+      - name: Set ANDROID_HOME for subsequent steps
+        run: |
+          echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> $GITHUB_ENV
+
       - name: Finalize Android SDK
         if: env.turbo_cache_hit != 1
         run: |
@@ -106,6 +110,7 @@ jobs:
 
       - name: Build for Android
         env:
+          ADNROID_HOME: env.ANDROID_HOME
           JAVA_OPTS: "-XX:MaxHeapSize=6g"
         run: |
           yarn turbo run build:android --cache-dir="${{ env.TURBO_CACHE_DIR }}"
