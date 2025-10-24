@@ -18,17 +18,37 @@ npm install react-native-date-i18n
 
 
 ```js
-import { DateType, formatDate, formatTime, formatDateTime } from 'react-native-date-i18n';
+import {
+  DateType,
+  formatDate,
+  formatTime,
+  formatDateTime,
+  formatAbbreviatedShortDate,
+  formatAbbreviatedShortDateRange,
+  formatAbbreviatedShortTime,
+  formatAbbreviatedShortTimeRange
+} from 'react-native-date-i18n';
 
 formatDate(testDate, DateType.long);
 formatTime(testDate, DateType.medium);
 formatDateTime(testDate, DateType.full, DateType.short);
+formatAbbreviatedShortDate(testDate);
+formatAbbreviatedShortDateRange(testDate, testDate2);
+formatAbbreviatedShortTime(testDate);
+formatAbbreviatedShortTimeRange(testDate, testDate2);
 ```
 
 The `DateType` options map onto values of the same names across both operating systems:
 
  * [iOS Formats](https://developer.apple.com/documentation/foundation/dateformatter/style)
  * [Android Formats](https://developer.android.com/reference/java/time/format/FormatStyle)
+
+### Screenshots
+
+<div style="display: flex;flex-direction:row">
+  <img src="./.github/screenshots/1.png" alt="First demonstration of possible outputs" height="250" />
+  <img src="./.github/screenshots/2.png" alt="Second demonstration of possible outputs" height="250" />
+</div>
 
 
 ## Contributing

@@ -28,6 +28,10 @@ export interface Spec extends TurboModule {
     dateFormatStyle?: DateType,
     timeFormatStyle?: DateType
   ): string;
+  formatAbbreviatedShortDate(date: number): string;
+  formatAbbreviatedShortDateRange(date1: number, date2: number): string;
+  formatAbbreviatedShortTime(date: number): string;
+  formatAbbreviatedShortTimeRange(date1: number, date2: number): string;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('DateI18n');

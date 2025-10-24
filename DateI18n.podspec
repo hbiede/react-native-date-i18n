@@ -17,5 +17,9 @@ Pod::Spec.new do |s|
   s.private_header_files = "ios/**/*.h"
 
 
-  install_modules_dependencies(s)
+  if respond_to?(:install_modules_dependencies, true)
+    install_modules_dependencies(s)
+  else
+    s.dependency "React-Core"
+  end
 end
