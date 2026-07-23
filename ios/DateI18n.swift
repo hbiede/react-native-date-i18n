@@ -80,9 +80,9 @@ public class DateI18nImplementation: NSObject {
     let b = self.dateFrom(max(date1, date2))
 
     let testFormat = Date.FormatStyle().year().month().day()
-    if a.formatted(testFormat) != b.formatted(testFormat) {
+    if a.formatted(testFormat) == b.formatted(testFormat) {
       return (a..<b).formatted(
-        Date.IntervalFormatStyle().year().hour(.conversationalDefaultDigits(amPM: .abbreviated)).minute()
+        Date.IntervalFormatStyle().hour(.conversationalDefaultDigits(amPM: .abbreviated)).minute()
       )
     }
 
